@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #39afaf;         
+  --blue-dark: #9365e9;    
+  --text: #ffffff;         
+  --link: #ffffff;         
+  --btn-bg: #ffffff;       
+  --btn-text: #0b0b0b;     
+  --muted: #d9e6f2;        
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #0b0b0b; 
+  font-family: "Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--blue);
+  overflow-x: hidden;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+header a img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+header nav ul li a {
+  color: var(--link);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding: 6px 2px;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  opacity: 0.9;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a:focus::after {
+  transform: scaleX(1);
+}
+
+
+article {
+  color: var(--text);
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  gap: 40px;
+  padding: 20px 0 0;
+}
+
+#textBox {
+  flex: 1 1 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#textBox h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.15;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+#textBox h2 span {
+  display: block;                /* salto de línea como en el Pepsi */
+  font-size: clamp(56px, 8vw, 96px);
+  text-transform: uppercase;
+}
+
+#textBox p {
+  margin-top: 14px;
+  max-width: 62ch;
+  color: #f2f6fb;
+}
+
+#textBox a {
+  display: inline-block;
+  margin-top: 16px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+#textBox a:hover,
+#textBox a:focus {
+  background: #eef3f8;
+  transform: translateY(-1px);
+}
+
+#imgBox {
+  flex: 1 1 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imgBox img {
+  width: min(520px, 100%);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.35));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+#iconos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0 0;
+}
+
+#iconos li {
+  list-style: none;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+#iconos li img {
+  max-width: 40px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.25));
+}
+
+#iconos li:hover {
+  transform: translateY(-6px);
+}
+
+
+main section video {
+  border-radius: 8px;
+  outline: 2px solid rgba(255,255,255,0.15);
+  outline-offset: 2px;
+}
+
+main section h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+form {
+  margin-top: 6px;
+}
+
+form label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  margin-top: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.15);
+  color: var(--text);
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.85);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+}
+
+button,
+input[type="submit"] {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #eef3f8;
+  transform: translateY(-1px);
+}
+
+
+#rrss {
+  position: fixed;
+  right: 24px;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+}
+
+#rrss li {
+  list-style: none;
+}
+
+#rrss li a img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.25));
+  transition: transform 0.2s ease;
+}
+
+#rrss li a:hover img,
+#rrss li a:focus img {
+  transform: scale(1.05) translateY(-2px);
+}
+
+
+@media (max-width: 1100px) {
+  header {
+    padding: 18px 56px;
+  }
+  article {
+    width: 84%;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 16px 28px;
+  }
+
+  article {
+    width: 88%;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  #imgBox {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  #imgBox img {
+    width: min(420px, 100%);
+  }
+
+  #rrss {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0 16px;
+  }
+
+  #textBox h2 {
+    font-size: clamp(32px, 6vw, 48px);
+  }
+
+  #textBox h2 span {
+    font-size: clamp(42px, 9vw, 72px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
