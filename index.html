@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Lingua | Academia de Idiomas</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <a href="index.html" aria-label="Global Lingua - Inicio">
+          <img src="images/png-clipart-language-school-italian-translation-american-language-academy-school-angle-flag.png " alt="Logo Global Lingua" />
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <article>
+        <section id="textBox">
+          <h2>
+            aprende con los mejores
+            <span> en poco tiempo</span>
+          </h2>
+
+          <p>
+            En <strong>Global Lingua</strong> ofrecemos cursos de
+            <strong>inglés</strong>, <strong>francés</strong> y
+            <strong>alemán</strong> para todos los niveles. Metodología
+            comunicativa, horarios flexibles y docentes certificados. ¡Comienza
+            hoy!
+          </p>
+
+          <a href="cursos.html" aria-label="Ver cursos disponibles">ver cursos</a>
+        </section>
+
+        <section id="imgBox" aria-label="Imagen principal">
+          
+          <img
+            src="images/alumnos.png"
+            alt="Estudiantes"
+          />
+        </section>
+      </article>
+
+      <ul id="iconos" aria-label="Idiomas disponibles">
+        <li>
+          <img src="images/reino bandera1.jpg" alt="Inglés" />
+        </li>
+        <li>
+          <img src="images/bandera francia 1.jpg" alt="Francés" />
+        </li>
+        <li>
+          <img src="images/bandera alemania.jpg" alt="Alemán" />
+        </li>
+      </ul>
+
+      <section
+        style="width:70%; align-self:center; color:white; margin-bottom: 10px;"
+        aria-label="Video institucional"
+      >
+        <h3 style="margin: 10px 0;">Conoce Global Lingua</h3>
+
+        <video
+          controls
+          preload="metadata"
+          style="width:100%; max-width:900px; display:block;"
+          poster="images/poster.jpg"
+        >
+          <source src="videos/Video_Moderno_de_Campus_Frutiger_Aero.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5.
+        </video>
+      </section>
+
+      <section
+        style="width:70%; align-self:center; color:white; margin: 0 0 30px;"
+        aria-label="Pre-registro de aspirantes"
+      >
+        <h3 style="margin: 10px 0;">Pre-registro rápido</h3>
+        <form action="#" method="post">
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <label style="flex:1 1 220px;">
+              Nombre
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Tu nombre completo"
+                required
+                style="width:100%; padding:8px;"
+              />
+            </label>
+
+            <label style="flex:1 1 220px;">
+              Correo
+              <input
+                type="email"
+                name="correo"
+                placeholder="tucorreo@ejemplo.com"
+                required
+                style="width:100%; padding:8px;"
+              />
+            </label>
+
+            <label style="flex:1 1 220px;">
+              Idioma de interés
+              <select name="idioma" required style="width:100%; padding:8px;">
+                <option value="">Selecciona un idioma</option>
+                <option value="ingles">Inglés</option>
+                <option value="frances">Francés</option>
+                <option value="aleman">Alemán</option>
+              </select>
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            style="margin-top:12px; padding:10px 16px; font-weight:700;"
+          >
+            Enviar (simulado)
+          </button>
+        </form>
+      </section>
+
+      <ul id="rrss" aria-label="Redes sociales">
+        <li>
+          <a href="#" aria-label="Facebook"
+            ><img src="images/facebook.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Instagram"
+            ><img src="images/instagram.png" alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="#" aria-label="X (Twitter)"
+            ><img src="images/twitter.png" alt="X"
+          /></a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
